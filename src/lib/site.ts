@@ -12,6 +12,9 @@ export const site = {
     behance: "#",
     resume: "#",
   },
+  // TODO(Awais): paste your Formspree form URL here (e.g. "https://formspree.io/f/abcdwxyz").
+  // Until then, the contact form opens the visitor's email app with the message filled in.
+  formEndpoint: "",
 };
 
 export const nav = [

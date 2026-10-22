@@ -18,7 +18,7 @@ export function Sticker({
 }) {
   return (
     <span
-      className={`inline-block whitespace-nowrap px-2.5 py-1.5 font-mono text-[11px] tracking-[0.08em] ${wiggle ? "sticker-wiggle" : ""} ${className}`}
+      className={`inline-block w-fit self-start whitespace-nowrap px-2.5 py-1.5 font-mono text-[11px] tracking-[0.08em] ${wiggle ? "sticker-wiggle" : ""} ${className}`}
       style={{ background: bg, color: ink, rotate: `${rotate}deg`, ["--r" as string]: `${rotate}deg` } as CSSProperties}
     >
       {children}
