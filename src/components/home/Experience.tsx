@@ -43,7 +43,7 @@ export default function Experience() {
         note="where I've been"
         title="Experience"
         right={
-          <a href={site.links.resume} className="flex h-11 items-center gap-2 rounded-md border border-[#3A3A44] px-4 font-mono text-xs tracking-[0.06em] transition-colors hover:border-ink">
+          <a href={site.links.resume} download="Awais-Raza-Resume.pdf" className="flex h-11 items-center gap-2 rounded-md border border-[#3A3A44] px-4 font-mono text-xs tracking-[0.06em] transition-colors hover:border-ink">
             <DownloadIcon /> DOWNLOAD RESUME
           </a>
         }

@@ -46,7 +46,7 @@ export default function ContactPage() {
           <a href={site.links.behance} target="_blank" rel="noreferrer" className="flex min-h-11 items-center gap-2.5 rounded-full border border-[#3A3A44] px-[18px] font-semibold transition-colors hover:border-ink">
             <BehanceIcon /> Behance
           </a>
-          <a href={site.links.resume} className="flex min-h-11 items-center gap-2.5 rounded-full bg-ink px-[18px] font-semibold text-bg transition-transform hover:-translate-y-0.5">
+          <a href={site.links.resume} download="Awais-Raza-Resume.pdf" className="flex min-h-11 items-center gap-2.5 rounded-full bg-ink px-[18px] font-semibold text-bg transition-transform hover:-translate-y-0.5">
             <DownloadIcon size={16} /> Resume
           </a>
         </div>
