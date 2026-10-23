@@ -34,7 +34,7 @@ export const caseStudies: CaseStudy[] = [
     tagline: "The future of unified digital wealth", sticker: "FINTECH · WEB3", accent: "#A78BFA",
     summary: "Manage crypto, stocks and real-world assets in one secure wallet, with a seamless investing experience.",
     cover: "/images/pace-wallet/cover.webp",
-    overview: [["Industry", "FinTech · Web3"], ["Platform", "iOS & Android"], ["Timeline", "8 Weeks"], ["My role", "Product Designer"], ["Deliverables", "Branding · Onboarding · UI"]],
+    overview: [["Industry", "FinTech · Web3"], ["Platform", "iOS & Android"], ["Timeline", "3 Weeks"], ["My role", "Product Designer"], ["Deliverables", "Branding · Onboarding · UI"]],
     problem: ["Too many apps for one portfolio", "Managing digital wealth today means switching between multiple apps for crypto, stocks, and investments, making portfolio management fragmented, inefficient, and difficult to navigate."],
     solution: ["One secure wallet for everything", "Manage cryptocurrencies, stocks, and tokenized real-world assets from a single secure wallet, eliminating the need to switch between multiple platforms."],
     sections: [
@@ -49,7 +49,7 @@ export const caseStudies: CaseStudy[] = [
     tagline: "Take control of your crypto", sticker: "FINTECH · WEB3", accent: "#C6F432",
     summary: "A smarter way to hold, send, and use crypto, built for simplicity, security, and control.",
     cover: "/images/veyro/cover.webp",
-    overview: [["Industry", "FinTech · Web3"], ["Platform", "iOS & Android"], ["Timeline", "8 Weeks"], ["My role", "Product Designer"], ["Deliverables", "Branding · UI"]],
+    overview: [["Industry", "FinTech · Web3"], ["Platform", "iOS & Android"], ["Timeline", "5 Weeks"], ["My role", "Product Designer"], ["Deliverables", "Branding · UI"]],
     problem: ["Crypto feels complex and risky", "Managing crypto today means dealing with complex interfaces, fragmented apps, and risky swaps, making it difficult for everyday users to hold, send, and control their digital assets with confidence."],
     solution: ["One clean, secure wallet", "VEYRO brings together asset tracking, instant swaps, card payments, and portfolio management in one clean, secure wallet, giving users full control of their crypto without the complexity."],
     sections: [
@@ -64,7 +64,7 @@ export const caseStudies: CaseStudy[] = [
     tagline: "The brokerage that bets on you", sticker: "FINTECH · BROKERAGE", accent: "#34D399",
     summary: "Invest, trade and grow in Pakistan's stock market, all in one profit-sharing brokerage built for every investor.",
     cover: "/images/youngs-capital/cover.webp",
-    overview: [["Industry", "FinTech · Web3"], ["Platform", "iOS & Android"], ["Timeline", "8 Weeks"], ["My role", "Product Designer"], ["Deliverables", "Branding · UI"]],
+    overview: [["Industry", "FinTech · Web3"], ["Platform", "iOS & Android"], ["Timeline", "6 Weeks"], ["My role", "Product Designer"], ["Deliverables", "Branding · UI"]],
     problem: ["Investors don't trust the market", "Pakistan's financial market lacks transparency and trust, leaving everyday investors with no reliable brokerage that truly stands beside them through market highs and lows."],
     solution: ["A brokerage that shares the risk", "Youngs Capital introduces Pakistan's first profit-and-loss sharing brokerage: a trusted partner that celebrates wins together and shoulders losses side by side."],
     sections: [
@@ -79,7 +79,7 @@ export const caseStudies: CaseStudy[] = [
     tagline: "Market transparency platform", sticker: "FINTECH · WEB", accent: "#7DD3FC",
     summary: "Bringing verified market data, transparent trading activity and trusted investor discussions into one platform.",
     cover: "/images/traqstock/cover.webp",
-    overview: [["Industry", "FinTech · Web3"], ["Platform", "Web Platform"], ["Timeline", "8 Weeks"], ["My role", "Product Designer"], ["Deliverables", "Branding · Web UI"]],
+    overview: [["Industry", "FinTech · Web3"], ["Platform", "Web Platform"], ["Timeline", "4 Weeks"], ["My role", "Product Designer"], ["Deliverables", "Branding · Web UI"]],
     problem: ["Market data is scattered", "Company data, share structures, trading activity and investor discussions are spread across many sources, making it hard for investors to verify information and take part in trustworthy discussions."],
     solution: ["One transparent source of truth", "Companies publish verified share data, and investors get trusted company info, transparent trading activity, blockchain-anchored records and identity-verified discussions, all in one place."],
     sections: [
