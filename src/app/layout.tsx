@@ -9,10 +9,8 @@ const description =
   "Product designer from Pakistan designing fintech apps, SaaS platforms and websites that feel effortless.";
 
 // Link previews (WhatsApp, LinkedIn, Slack…) need a full URL for the image.
-// On Vercel this is filled in automatically with the main domain.
-const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
-  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-  : "http://localhost:3000";
+// Change this if you move to a new domain (e.g. awaisraza.com).
+const siteUrl = "https://awaisraza-design.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
