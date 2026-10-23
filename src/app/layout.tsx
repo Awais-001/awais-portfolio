@@ -10,7 +10,7 @@ const description =
 
 // Link previews (WhatsApp, LinkedIn, Slack…) need a full URL for the image.
 // Change this if you move to a new domain (e.g. awaisraza.com).
-const siteUrl = "https://awaisraza.xyz";
+const siteUrl = "https://www.awaisraza.xyz";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
