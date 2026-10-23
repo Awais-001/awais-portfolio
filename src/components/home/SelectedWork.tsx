@@ -65,7 +65,7 @@ function CardBody({ p, i }: { p: Featured; i: number }) {
 
       <div className="relative min-w-0 flex-1">
         <div className="relative aspect-[16/10] -rotate-[1.5deg] border-[7px] border-ink shadow-[0_22px_40px_rgba(0,0,0,0.35)] transition-transform duration-500 group-hover:rotate-0">
-          <Image src={p.cover} alt={`${p.title} cover`} fill sizes="(min-width:1024px) 620px, 90vw" className="object-cover" />
+          <Image src={p.cover} alt={`${p.title} cover`} fill sizes="(min-width:1024px) 620px, 90vw" className="object-cover object-top" />
           <Tape className="-left-6 -top-2" rotate={22} opacity={p.tapeOpacity} />
           <Tape className="-right-6 -top-2" rotate={-22} opacity={p.tapeOpacity} />
           <Sticker className="absolute -bottom-4 left-5" bg={p.sticker.bg} ink={p.sticker.ink} rotate={-4}>

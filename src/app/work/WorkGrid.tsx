@@ -39,7 +39,7 @@ function CaseCard({ item, big = false, i }: { item: WorkItem; big?: boolean; i: 
       >
         <span aria-hidden="true" className="absolute left-8 top-0 h-1 w-16 rounded-full" style={{ background: item.accent }} />
         <div className={`relative overflow-hidden rounded-[10px] border border-card-line aspect-[16/9]`}>
-          <Image src={item.cover} alt={`${item.title} cover`} fill sizes={big ? "(min-width:1024px) 560px, 90vw" : "(min-width:1024px) 380px, 90vw"} className="object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
+          <Image src={item.cover} alt={`${item.title} cover`} fill sizes={big ? "(min-width:1024px) 560px, 90vw" : "(min-width:1024px) 380px, 90vw"} className="origin-top object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]" />
         </div>
         <div className="flex items-end justify-between gap-4 px-1.5">
           <div className="flex min-w-0 flex-col gap-2.5">
