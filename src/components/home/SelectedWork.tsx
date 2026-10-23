@@ -46,14 +46,6 @@ function CardBody({ p, i }: { p: Featured; i: number }) {
         <p className="text-lg leading-[1.55]" style={{ color: p.subInk ?? p.ink }}>
           {p.description}
         </p>
-        <dl className="flex flex-wrap gap-x-7 gap-y-3 border-t border-dashed pt-4" style={{ borderColor: `${p.ink}40` }}>
-          {p.meta.map((m) => (
-            <div key={m.label} className="flex flex-col gap-1">
-              <dt className="font-mono text-[10px] uppercase tracking-[0.1em] opacity-60">{m.label}</dt>
-              <dd className="text-base font-semibold">{m.value}</dd>
-            </div>
-          ))}
-        </dl>
         <Link
           href={`/work/${p.slug}`}
           className="group/btn flex h-12 w-fit items-center gap-2.5 rounded-full px-6 text-base font-semibold transition-transform hover:-translate-y-0.5"
