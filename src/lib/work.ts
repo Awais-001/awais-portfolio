@@ -1,3 +1,5 @@
+import { site as profile } from "./site";
+
 export type Category = "apps" | "ux" | "websites" | "branding";
 
 export type WorkItem = {
@@ -27,9 +29,10 @@ export const uxCases: WorkItem[] = [
   { slug: "landlord", title: "Landlord", line: "A tenant management app that helps property owners run rentals without the spreadsheets.", cover: "/images/landlord/cover.webp", accent: "#FF8A5B", tag: "UX CASE STUDY", category: "ux" },
 ];
 
-// TODO(Awais): add the live URL or Behance link for each website in `external`.
+// Websites open your Behance profile for now. Swap in a live URL or a
+// specific Behance project link per site whenever you have one.
 const site = (slug: string, title: string): WorkItem => ({
-  slug, title, line: "Landing page", cover: `/images/websites/${slug}.webp`, accent: "#EDEDF0", tag: "WEBSITE", category: "websites", external: "#",
+  slug, title, line: "Landing page", cover: `/images/websites/${slug}.webp`, accent: "#EDEDF0", tag: "WEBSITE", category: "websites", external: profile.links.behance,
 });
 export const websites: WorkItem[] = [
   site("lunera", "Lunera"), site("travara", "Travara"), site("funky-fitness", "Funky Fitness"),

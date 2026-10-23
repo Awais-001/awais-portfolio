@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, LayoutGroup, motion, useReducedMotion } from "motion/react";
 import { apps, branding, uxCases, websites, type Category, type WorkItem } from "@/lib/work";
 import { ArrowRight, ArrowUpRight, Sticker } from "@/components/ui";
+import { site as profile } from "@/lib/site";
 
 const filters: { id: "all" | Category; label: string; count: number }[] = [
   { id: "all", label: "All", count: apps.length + uxCases.length + websites.length + branding.length },
@@ -146,7 +147,7 @@ export default function WorkGrid() {
               <SectionHead note="the side quests" title="Websites & landing pages" count={websites.length} />
               <div className="grid gap-x-6 gap-y-9 sm:grid-cols-2 lg:grid-cols-4">
                 {websites.map((w, i) => <SiteTile key={w.slug} item={w} i={i} />)}
-                <a href="#" target="_blank" rel="noreferrer" className="flex aspect-[3/2] flex-col justify-between rounded-xl border-[1.5px] border-dashed border-[#3A3A44] p-5 transition-colors hover:border-ink">
+                <a href={profile.links.behance} target="_blank" rel="noreferrer" className="flex aspect-[3/2] flex-col justify-between rounded-xl border-[1.5px] border-dashed border-[#3A3A44] p-5 transition-colors hover:border-ink">
                   <span className="font-mono text-[11px] tracking-[0.1em] text-faint">ARCHIVE</span>
                   <span className="font-hand text-[30px] leading-[1.05] text-note">+ more shots<br />on Behance ↗</span>
                 </a>
