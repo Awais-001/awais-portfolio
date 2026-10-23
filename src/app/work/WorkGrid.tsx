@@ -35,22 +35,22 @@ function CaseCard({ item, big = false, i }: { item: WorkItem; big?: boolean; i: 
     <motion.div layout initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ ...spring, delay: i * 0.05 }}>
       <Link
         href={`/work/${item.slug}`}
-        className="group relative flex h-full flex-col gap-5 rounded-2xl border border-card-line bg-card p-[18px] pb-6 transition-transform duration-300 hover:-translate-y-1.5"
+        className="group relative flex h-full flex-col gap-4 rounded-2xl border border-card-line bg-card p-3.5 pb-5 transition-transform duration-300 hover:-translate-y-1.5"
       >
         <span aria-hidden="true" className="absolute left-8 top-0 h-1 w-16 rounded-full" style={{ background: item.accent }} />
-        <div className={`relative overflow-hidden rounded-[10px] border border-card-line ${big ? "aspect-[16/10]" : "aspect-[16/10]"}`}>
+        <div className={`relative overflow-hidden rounded-[10px] border border-card-line aspect-[16/9]`}>
           <Image src={item.cover} alt={`${item.title} cover`} fill sizes={big ? "(min-width:1024px) 560px, 90vw" : "(min-width:1024px) 380px, 90vw"} className="object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
         </div>
-        <div className="flex items-end justify-between gap-5 px-1.5">
+        <div className="flex items-end justify-between gap-4 px-1.5">
           <div className="flex min-w-0 flex-col gap-2.5">
             <Sticker bg={item.accent} rotate={-2}>
               {item.tag}
             </Sticker>
-            <h3 className={`${big ? "text-[30px]" : "text-[26px]"} font-extrabold tracking-[-0.02em]`}>{item.title}</h3>
-            <p className="text-base leading-[1.5] text-[#B4B4BE]">{item.line}</p>
+            <h3 className={`${big ? "text-2xl" : "text-[22px]"} font-extrabold tracking-[-0.02em]`}>{item.title}</h3>
+            <p className="text-[15px] leading-[1.5] text-[#B4B4BE]">{item.line}</p>
           </div>
-          <span className="flex size-12 shrink-0 items-center justify-center rounded-full text-bg transition-transform group-hover:translate-x-1" style={{ background: item.accent }}>
-            <ArrowRight size={18} />
+          <span className="flex size-11 shrink-0 items-center justify-center rounded-full text-bg transition-transform group-hover:translate-x-1" style={{ background: item.accent }}>
+            <ArrowRight size={17} />
           </span>
         </div>
       </Link>
@@ -75,7 +75,7 @@ function SiteTile({ item, i }: { item: WorkItem; i: number }) {
         <Image src={item.cover} alt={`${item.title} landing page`} fill sizes="(min-width:1024px) 380px, 90vw" className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]" />
       </div>
       <div className="flex items-center justify-between px-1">
-        <span className="text-[21px] font-semibold tracking-[-0.01em]">{item.title}</span>
+        <span className="text-lg font-semibold tracking-[-0.01em]">{item.title}</span>
         <ArrowUpRight size={18} className="text-faint transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-ink" />
       </div>
     </motion.a>
@@ -120,15 +120,15 @@ export default function WorkGrid() {
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-[1200px] flex-col gap-28 px-6 pb-10 pt-16">
+      <div className="mx-auto flex max-w-[1200px] flex-col gap-36 px-6 pb-10 pt-16">
         <AnimatePresence mode="popLayout">
           {show("apps") && (
             <motion.section key="apps" layout className="flex flex-col gap-10" exit={{ opacity: 0 }}>
               <SectionHead note="the main course" title="Fintech apps" count={apps.length} />
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-8 md:grid-cols-2">
                 {apps.slice(0, 2).map((a, i) => <CaseCard key={a.slug} item={a} big i={i} />)}
               </div>
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {apps.slice(2).map((a, i) => <CaseCard key={a.slug} item={a} i={i + 2} />)}
               </div>
             </motion.section>
@@ -136,7 +136,7 @@ export default function WorkGrid() {
           {show("ux") && (
             <motion.section key="ux" layout className="flex flex-col gap-10" exit={{ opacity: 0 }}>
               <SectionHead note="research, personas, the whole process" title="UX case studies" count={uxCases.length} />
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-8 md:grid-cols-2">
                 {uxCases.map((a, i) => <CaseCard key={a.slug} item={a} big i={i} />)}
               </div>
             </motion.section>
@@ -144,15 +144,15 @@ export default function WorkGrid() {
           {show("websites") && (
             <motion.section key="websites" layout className="flex flex-col gap-10" exit={{ opacity: 0 }}>
               <SectionHead note="the side quests" title="Websites & landing pages" count={websites.length} />
-              <div className="grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-x-6 gap-y-9 sm:grid-cols-2 lg:grid-cols-4">
                 {websites.map((w, i) => <SiteTile key={w.slug} item={w} i={i} />)}
-                <a href="#" target="_blank" rel="noreferrer" className="flex aspect-[3/2] flex-col justify-between rounded-xl border-[1.5px] border-dashed border-[#3A3A44] p-7 transition-colors hover:border-ink">
+                <a href="#" target="_blank" rel="noreferrer" className="flex aspect-[3/2] flex-col justify-between rounded-xl border-[1.5px] border-dashed border-[#3A3A44] p-5 transition-colors hover:border-ink">
                   <span className="font-mono text-[11px] tracking-[0.1em] text-faint">ARCHIVE</span>
-                  <span className="font-hand text-[38px] leading-[1.05] text-note">+ more shots<br />on Behance ↗</span>
+                  <span className="font-hand text-[30px] leading-[1.05] text-note">+ more shots<br />on Behance ↗</span>
                 </a>
-                <Link href="/contact" className="group flex aspect-[3/2] flex-col justify-between rounded-xl bg-lime p-7 text-bg transition-transform hover:-rotate-1">
-                  <span className="font-hand text-[30px]">need one for your brand?</span>
-                  <span className="text-[30px] font-extrabold leading-[1.05] tracking-[-0.02em]">Let&apos;s build your landing page →</span>
+                <Link href="/contact" className="group flex aspect-[3/2] flex-col justify-between rounded-xl bg-lime p-5 text-bg transition-transform hover:-rotate-1">
+                  <span className="font-hand text-2xl">need one for your brand?</span>
+                  <span className="text-[23px] font-extrabold leading-[1.05] tracking-[-0.02em]">Let&apos;s build your landing page →</span>
                 </Link>
               </div>
             </motion.section>
@@ -164,15 +164,15 @@ export default function WorkGrid() {
                 <Link
                   key={b.slug}
                   href={`/work/${b.slug}`}
-                  className="group relative flex flex-col gap-10 rounded-2xl border border-card-line bg-card p-[18px] transition-transform duration-300 hover:-translate-y-1.5 lg:flex-row lg:items-center lg:pr-10"
+                  className="group relative flex flex-col gap-10 rounded-2xl border border-card-line bg-card p-3.5 transition-transform duration-300 hover:-translate-y-1.5 lg:flex-row lg:items-center lg:gap-12 lg:pr-12"
                 >
                   <span aria-hidden="true" className="absolute left-8 top-0 h-1 w-16 rounded-full" style={{ background: b.accent }} />
-                  <div className="relative aspect-video overflow-hidden rounded-[10px] lg:w-[680px] lg:shrink-0">
-                    <Image src={b.cover} alt="NERO brand guidelines cover" fill sizes="(min-width:1024px) 680px, 90vw" className="object-cover" />
+                  <div className="relative aspect-video overflow-hidden rounded-[10px] lg:w-[520px] lg:shrink-0">
+                    <Image src={b.cover} alt="NERO brand guidelines cover" fill sizes="(min-width:1024px) 520px, 90vw" className="object-cover" />
                   </div>
                   <div className="flex flex-col gap-3.5 px-1.5 pb-4 lg:pb-0">
                     <Sticker bg={b.accent} rotate={-2}>{b.tag}</Sticker>
-                    <h3 className="text-[56px] font-extrabold leading-[0.95] tracking-[-0.03em]">{b.title}</h3>
+                    <h3 className="text-[44px] font-extrabold leading-[0.95] tracking-[-0.03em]">{b.title}</h3>
                     <p className="text-base leading-[1.5] text-[#B4B4BE]">{b.line}</p>
                     <span className="flex size-12 items-center justify-center self-end rounded-full text-bg transition-transform group-hover:translate-x-1" style={{ background: b.accent }}>
                       <ArrowRight size={18} />
