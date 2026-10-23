@@ -25,9 +25,11 @@ const process = [
 
 const tools: { group: string; color: string; items: string[] }[] = [
   { group: "Design", color: "#EDEDF0", items: ["Figma", "Figma Make", "Figma AI", "Adobe XD"] },
+  { group: "Visual & motion", color: "#7DD3FC", items: ["Photoshop", "Illustrator", "Lottie / Rive"] },
   { group: "AI", color: "#A78BFA", items: ["Claude", "ChatGPT", "Lovable", "Google Stitch"] },
   { group: "Front-end", color: "#5EEAD4", items: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "Bootstrap"] },
-  { group: "Research", color: "#FF8A5B", items: ["User interviews", "Usability testing", "Surveys", "A/B testing"] },
+  { group: "Teamwork", color: "#C6F432", items: ["Jira", "Slack", "Notion"] },
+  { group: "Research", color: "#FF8A5B", items: ["User interviews", "Usability testing", "Surveys", "A/B testing", "Hotjar", "Google Forms"] },
 ];
 
 export default function AboutPage() {
