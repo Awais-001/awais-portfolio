@@ -33,7 +33,7 @@ export const featured: Featured[] = [
     meta: [
       { label: "Industry", value: "FinTech · Web3" },
       { label: "Platform", value: "iOS & Android" },
-      { label: "Timeline", value: "8 Weeks" },
+      { label: "Timeline", value: "3 Weeks" },
     ],
   },
   {
@@ -52,7 +52,7 @@ export const featured: Featured[] = [
     meta: [
       { label: "Industry", value: "FinTech · Web3" },
       { label: "Platform", value: "iOS & Android" },
-      { label: "Timeline", value: "8 Weeks" },
+      { label: "Timeline", value: "5 Weeks" },
     ],
   },
   {
@@ -73,7 +73,7 @@ export const featured: Featured[] = [
     meta: [
       { label: "Industry", value: "FinTech · Web3" },
       { label: "Platform", value: "iOS & Android" },
-      { label: "Timeline", value: "8 Weeks" },
+      { label: "Timeline", value: "6 Weeks" },
     ],
   },
   {
@@ -92,7 +92,7 @@ export const featured: Featured[] = [
     meta: [
       { label: "Industry", value: "FinTech · Web3" },
       { label: "Platform", value: "Web Platform" },
-      { label: "Timeline", value: "8 Weeks" },
+      { label: "Timeline", value: "4 Weeks" },
     ],
   },
   {
