@@ -73,15 +73,15 @@ function StackCard({ p, i, total, progress }: { p: Featured; i: number; total: n
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress: enter } = useScroll({ target: ref, offset: ["start end", "start start"] });
   const tilt = i % 2 === 0 ? -1.5 : 1.5;
-  // Card swings in with a bigger tilt and wobbles into place.
-  const rotate = useSpring(useTransform(enter, [0, 1], [tilt * 5, tilt]), { stiffness: 180, damping: 9 });
+  // Card swings in with a small tilt and settles gently (one soft overshoot, no wobble).
+  const rotate = useSpring(useTransform(enter, [0, 1], [tilt * 3, tilt]), { stiffness: 110, damping: 20, mass: 1.1 });
   const depth = total - 1 - i;
   const scale = useTransform(progress, [i / total, 1], [1, 1 - depth * 0.035]);
   const bright = useTransform(progress, [i / total, 1], [1, 1 - depth * 0.09]);
   const filter = useMotionTemplate`brightness(${bright})`;
 
   return (
-    <div ref={ref} className="sticky" style={{ top: 110 + i * 16, marginBottom: i === total - 1 ? 0 : "28vh" }}>
+    <div ref={ref} className="sticky" style={{ top: 110 + i * 16, marginBottom: i === total - 1 ? 0 : "65vh" }}>
       <motion.div style={{ rotate, scale, filter, transformOrigin: "50% 0%" }}>
         <CardBody p={p} i={i} />
       </motion.div>
