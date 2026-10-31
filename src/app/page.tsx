@@ -14,10 +14,10 @@ export default function Home() {
         <div className="border-t border-dashed border-line" />
       </div>
       <About />
+      <Capabilities />
       <SelectedWork />
       <Numbers />
       <Experience />
-      <Capabilities />
       <LetsTalk />
     </>
   );

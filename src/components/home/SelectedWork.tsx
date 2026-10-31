@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import {
   motion,
   useMotionTemplate,
@@ -87,7 +87,7 @@ function StackCard({ p, i, total, progress }: { p: Featured; i: number; total: n
   // Each folder sticks a little lower than the one before, so the staggered tabs
   // pile up like files in a drawer.
   return (
-    <div className="sticky" style={{ top: 96 + i * 18, marginBottom: i === total - 1 ? 0 : "65vh" }}>
+    <div className="sticky" style={{ top: 96 + i * 18 }}>
       <motion.div style={{ scale, filter, transformOrigin: "50% 0%" }}>
         <Folder p={p} i={i} total={total} />
       </motion.div>
@@ -108,7 +108,14 @@ export default function SelectedWork() {
 
       <div ref={container} className="relative">
         {stacking ? (
-          featured.map((p, i) => <StackCard key={p.slug} p={p} i={i} total={featured.length} progress={scrollYProgress} />)
+          featured.map((p, i) => (
+            <Fragment key={p.slug}>
+              <StackCard p={p} i={i} total={featured.length} progress={scrollYProgress} />
+              {/* Scroll room between folders. Kept outside the sticky element: a margin on it
+                  would make the browser release earlier folders before the last one lands. */}
+              <div aria-hidden="true" style={{ height: i === featured.length - 1 ? "22vh" : "65vh" }} />
+            </Fragment>
+          ))
         ) : (
           <div className="flex flex-col">
             {featured.map((p, i) => (
