@@ -3,6 +3,7 @@ import About from "@/components/home/About";
 import SelectedWork from "@/components/home/SelectedWork";
 import Numbers from "@/components/home/Numbers";
 import Experience from "@/components/home/Experience";
+import Capabilities from "@/components/home/Capabilities";
 import LetsTalk from "@/components/LetsTalk";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <SelectedWork />
       <Numbers />
       <Experience />
+      <Capabilities />
       <LetsTalk />
     </>
   );

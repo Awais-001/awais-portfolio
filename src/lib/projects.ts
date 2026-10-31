@@ -2,6 +2,7 @@ export type Featured = {
   slug: string;
   title: string;
   tagline: string;
+  label: string; // category · platform, shown above the title
   description: string;
   cover: string;
   color: string; // card background
@@ -21,6 +22,7 @@ export const featured: Featured[] = [
     slug: "pace-wallet",
     title: "Pace Wallet",
     tagline: "The future of unified digital wealth",
+    label: "Wealth app · iOS + Android",
     description:
       "Crypto, stocks and tokenized real-world assets in one secure wallet, with a seamless investing experience.",
     cover: "/images/pace-wallet/cover.webp",
@@ -40,6 +42,7 @@ export const featured: Featured[] = [
     slug: "veyro",
     title: "VEYRO",
     tagline: "Take control of your crypto",
+    label: "Crypto wallet · iOS + Android",
     description:
       "A smarter crypto wallet to hold, send, swap and spend, with full control and none of the complexity.",
     cover: "/images/veyro/cover.webp",
@@ -59,6 +62,7 @@ export const featured: Featured[] = [
     slug: "youngs-capital",
     title: "Youngs Capital",
     tagline: "The brokerage that bets on you",
+    label: "Brokerage · iOS + Android",
     description:
       "Pakistan's first profit-and-loss sharing brokerage. Invest, trade and grow on the PSX with a partner that shares both the wins and the losses.",
     cover: "/images/youngs-capital/cover.webp",
@@ -80,6 +84,7 @@ export const featured: Featured[] = [
     slug: "traqstock",
     title: "Traqstock",
     tagline: "Market transparency platform",
+    label: "Market data · Web platform",
     description:
       "A market intelligence platform where companies publish verified share data, and investors get transparent trading activity and identity-verified discussions.",
     cover: "/images/traqstock/cover.webp",
@@ -99,6 +104,7 @@ export const featured: Featured[] = [
     slug: "zazo",
     title: "ZAZO",
     tagline: "Get paid from anywhere",
+    label: "Payments · iOS + Android",
     description:
       "A cross-border wallet that helps Pakistani freelancers and businesses get paid in USD, hold two currencies and pay locally in seconds.",
     cover: "/images/zazo/cover.webp",

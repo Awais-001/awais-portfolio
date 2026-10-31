@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AnimatePresence, LayoutGroup, motion, useReducedMotion } from "motion/react";
 import { apps, branding, uxCases, websites, type Category, type WorkItem } from "@/lib/work";
-import { ArrowRight, ArrowUpRight, Sticker } from "@/components/ui";
+import { ArrowRight, ArrowUpRight, FolderTab, Sticker } from "@/components/ui";
 import { site as profile } from "@/lib/site";
 
 const filters: { id: "all" | Category; label: string; count: number }[] = [
@@ -31,14 +31,16 @@ function SectionHead({ note, title, count }: { note: string; title: string; coun
 }
 
 /** Dark card used for apps, UX case studies and branding. Links inside the site, so → arrow. */
-function CaseCard({ item, big = false, i }: { item: WorkItem; big?: boolean; i: number }) {
+function CaseCard({ item, big = false, i, tab }: { item: WorkItem; big?: boolean; i: number; tab: string }) {
   return (
     <motion.div layout initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ ...spring, delay: i * 0.05 }}>
       <Link
         href={`/work/${item.slug}`}
-        className="group relative flex h-full flex-col gap-4 rounded-2xl border border-card-line bg-card p-3.5 pb-5 transition-transform duration-300 hover:-translate-y-1.5"
+        className="group relative flex h-full flex-col gap-4 rounded-2xl rounded-tl-none border border-card-line bg-card p-3.5 pb-5 transition-transform duration-300 hover:-translate-y-1.5"
       >
-        <span aria-hidden="true" className="absolute left-8 top-0 h-1 w-16 rounded-full" style={{ background: item.accent }} />
+        <FolderTab size="sm" bg="var(--color-card)" ink="var(--color-ink)" border="var(--color-card-line)" star={item.accent} className="absolute -left-px bottom-full z-[1] translate-y-px">
+          {tab}
+        </FolderTab>
         <div className={`relative overflow-hidden rounded-[10px] border border-card-line aspect-[16/9]`}>
           <Image src={item.cover} alt={`${item.title} cover`} fill sizes={big ? "(min-width:1024px) 560px, 90vw" : "(min-width:1024px) 380px, 90vw"} className="origin-top object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]" />
         </div>
@@ -124,21 +126,21 @@ export default function WorkGrid() {
       <div className="mx-auto flex max-w-[1200px] flex-col gap-36 px-6 pb-10 pt-16">
         <AnimatePresence mode="popLayout">
           {show("apps") && (
-            <motion.section key="apps" layout className="flex flex-col gap-10" exit={{ opacity: 0 }}>
+            <motion.section key="apps" layout className="flex flex-col gap-16" exit={{ opacity: 0 }}>
               <SectionHead note="the main course" title="Fintech apps" count={apps.length} />
-              <div className="grid gap-8 md:grid-cols-2">
-                {apps.slice(0, 2).map((a, i) => <CaseCard key={a.slug} item={a} big i={i} />)}
+              <div className="mt-4 grid gap-x-8 gap-y-16 md:grid-cols-2">
+                {apps.slice(0, 2).map((a, i) => <CaseCard key={a.slug} item={a} big i={i} tab={`Project 0${i + 1}`} />)}
               </div>
-              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                {apps.slice(2).map((a, i) => <CaseCard key={a.slug} item={a} i={i + 2} />)}
+              <div className="grid gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
+                {apps.slice(2).map((a, i) => <CaseCard key={a.slug} item={a} i={i + 2} tab={`Project 0${i + 3}`} />)}
               </div>
             </motion.section>
           )}
           {show("ux") && (
             <motion.section key="ux" layout className="flex flex-col gap-10" exit={{ opacity: 0 }}>
               <SectionHead note="research, personas, the whole process" title="UX case studies" count={uxCases.length} />
-              <div className="grid gap-8 md:grid-cols-2">
-                {uxCases.map((a, i) => <CaseCard key={a.slug} item={a} big i={i} />)}
+              <div className="mt-4 grid gap-x-8 gap-y-16 md:grid-cols-2">
+                {uxCases.map((a, i) => <CaseCard key={a.slug} item={a} big i={i} tab={`UX case 0${i + 1}`} />)}
               </div>
             </motion.section>
           )}
@@ -165,9 +167,11 @@ export default function WorkGrid() {
                 <Link
                   key={b.slug}
                   href={`/work/${b.slug}`}
-                  className="group relative flex flex-col gap-10 rounded-2xl border border-card-line bg-card p-3.5 transition-transform duration-300 hover:-translate-y-1.5 lg:flex-row lg:items-center lg:gap-12 lg:pr-12"
+                  className="group relative mt-4 flex flex-col gap-10 rounded-2xl rounded-tl-none border border-card-line bg-card p-3.5 transition-transform duration-300 hover:-translate-y-1.5 lg:flex-row lg:items-center lg:gap-12 lg:pr-12"
                 >
-                  <span aria-hidden="true" className="absolute left-8 top-0 h-1 w-16 rounded-full" style={{ background: b.accent }} />
+                  <FolderTab size="sm" bg="var(--color-card)" ink="var(--color-ink)" border="var(--color-card-line)" star={b.accent} className="absolute -left-px bottom-full z-[1] translate-y-px">
+                    Branding
+                  </FolderTab>
                   <div className="relative aspect-video overflow-hidden rounded-[10px] lg:w-[520px] lg:shrink-0">
                     <Image src={b.cover} alt="NERO brand guidelines cover" fill sizes="(min-width:1024px) 520px, 90vw" className="object-cover" />
                   </div>

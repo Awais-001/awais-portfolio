@@ -20,7 +20,10 @@ export default function CaseHero({ c }: { c: CaseStudy }) {
           </svg>
           BACK TO WORK
         </Link>
-        <span className="font-hand text-[22px] text-[#6A6A74]">{c.crumb}</span>
+        <span className="inline-flex items-center gap-2 rounded-t-lg rounded-b-[2px] border border-[#34343A] bg-[#1E1E22] px-3.5 py-2 font-mono text-xs font-bold uppercase tracking-[0.06em] text-ink">
+          <span aria-hidden="true" style={{ color: c.accent }}>✦</span>
+          {c.crumb}
+        </span>
       </div>
 
       <motion.span

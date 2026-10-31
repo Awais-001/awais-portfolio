@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { caseStudies, getCaseStudy, type Shot } from "@/lib/caseStudies";
 import { imageSizes } from "@/lib/imageSizes";
 import Reveal from "@/components/Reveal";
-import { ArrowRight, Sticker, Tape } from "@/components/ui";
+import { ArrowRight, FolderTab, Sticker, Tape } from "@/components/ui";
 import CaseHero from "./CaseHero";
 
 export const dynamicParams = false;
@@ -115,9 +115,12 @@ export default async function CaseStudyPage({ params }: { params: Promise<{ slug
         </span>
         <Link
           href={`/work/${next.slug}`}
-          className="group flex flex-col gap-10 rounded-3xl px-8 py-10 text-bg transition-transform duration-300 hover:-translate-y-1.5 md:flex-row md:items-center md:px-14 md:py-12"
+          className="group relative mt-9 flex flex-col gap-10 rounded-3xl rounded-tl-none px-8 py-10 text-bg transition-transform duration-300 hover:-translate-y-1.5 md:flex-row md:items-center md:px-14 md:py-12"
           style={{ background: next.accent }}
         >
+          <FolderTab bg={next.accent} ink="var(--color-bg)" className="absolute left-0 bottom-full translate-y-px">
+            Up next
+          </FolderTab>
           <div className="flex flex-1 flex-col gap-4">
             <span className="font-mono text-xs uppercase tracking-[0.08em] opacity-75">{c.nextLabel ?? "Next project"}</span>
             <span className="text-[clamp(52px,7vw,88px)] font-extrabold leading-[0.95] tracking-[-0.04em]">{next.title}</span>

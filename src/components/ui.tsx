@@ -26,6 +26,35 @@ export function Sticker({
   );
 }
 
+/** Folder tab: sits on top of a card in the card's own color, like a file folder. */
+export function FolderTab({
+  children,
+  bg,
+  ink,
+  star,
+  border,
+  size = "md",
+  className = "",
+}: {
+  children: ReactNode;
+  bg: string;
+  ink: string;
+  star?: string;
+  border?: string;
+  size?: "sm" | "md";
+  className?: string;
+}) {
+  return (
+    <span
+      className={`inline-flex w-fit shrink-0 items-center gap-2 whitespace-nowrap rounded-t-[10px] font-mono font-bold uppercase tracking-[0.06em] ${size === "sm" ? "px-4 py-2 text-[11px]" : "px-6 py-3 text-xs"} ${className}`}
+      style={{ background: bg, color: ink, border: border ? `1px solid ${border}` : undefined, borderBottom: "none" }}
+    >
+      <span aria-hidden="true" style={{ color: star ?? ink }}>✦</span>
+      {children}
+    </span>
+  );
+}
+
 /** Translucent tape strip. Position it absolutely from the parent. */
 export function Tape({ className = "", opacity = 0.55, rotate = 0 }: { className?: string; opacity?: number; rotate?: number }) {
   return (
