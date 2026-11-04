@@ -15,11 +15,11 @@ export type WorkItem = {
 };
 
 export const apps: WorkItem[] = [
-  { slug: "pace-wallet", title: "Pace Wallet", line: "Crypto, stocks and real-world assets in one wallet.", cover: "/images/pace-wallet/cover.webp", accent: "#A78BFA", tag: "iOS & ANDROID", category: "apps" },
+  { slug: "zazo", title: "ZAZO", line: "Get paid in USD from anywhere, spend in PKR.", cover: "/images/zazo/cover.webp", accent: "#5EEAD4", tag: "iOS & ANDROID", category: "apps" },
   { slug: "veyro", title: "VEYRO", line: "Hold, send, swap and spend crypto, simply.", cover: "/images/veyro/cover.webp", accent: "#C6F432", tag: "iOS & ANDROID", category: "apps" },
   { slug: "youngs-capital", title: "Youngs Capital", line: "Pakistan's first profit-and-loss sharing brokerage.", cover: "/images/youngs-capital/cover.webp", accent: "#34D399", tag: "iOS & ANDROID", category: "apps" },
   { slug: "traqstock", title: "Traqstock", line: "Verified market data and transparent trading.", cover: "/images/traqstock/cover.webp", accent: "#7DD3FC", tag: "WEB PLATFORM", category: "apps" },
-  { slug: "zazo", title: "ZAZO", line: "Get paid in USD from anywhere, spend in PKR.", cover: "/images/zazo/cover.webp", accent: "#5EEAD4", tag: "iOS & ANDROID", category: "apps" },
+  { slug: "pace-wallet", title: "Pace Wallet", line: "Crypto, stocks and real-world assets in one wallet.", cover: "/images/pace-wallet/cover.webp", accent: "#A78BFA", tag: "iOS & ANDROID", category: "apps" },
 ];
 
 export const uxCases: WorkItem[] = [

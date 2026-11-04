@@ -30,7 +30,7 @@ const img = (slug: string, file: string, alt: string, extra: Partial<Shot> = {})
 export const caseStudies: CaseStudy[] = [
   // ---------- FINTECH APPS ----------
   {
-    slug: "pace-wallet", short: "The future of unified digital wealth.", kind: "app", crumb: "project 01 of 05", title: "Pace Wallet",
+    slug: "pace-wallet", short: "The future of unified digital wealth.", kind: "app", crumb: "project 05 of 05", title: "Pace Wallet",
     tagline: "The future of unified digital wealth", sticker: "FINTECH · WEB3", accent: "#A78BFA",
     summary: "Manage crypto, stocks and real-world assets in one secure wallet, with a seamless investing experience.",
     cover: "/images/pace-wallet/cover.webp",
@@ -42,7 +42,7 @@ export const caseStudies: CaseStudy[] = [
       { name: "Onboarding", note: "first five minutes", title: "Onboarding", body: "A guided onboarding experience that introduces users to crypto management, Web3 connectivity, and real-world investing in just a few steps.", shots: [img("pace-wallet", "onboarding", "Pace Wallet onboarding screens", { crop: 0.27 })] },
       { name: "User Interface", note: "the everyday screens", title: "User interface", shots: [img("pace-wallet", "ui", "Pace Wallet app screens", { crop: 0.19 })] },
     ],
-    next: "veyro",
+    next: "zazo", wrapNote: "back to the start",
   },
   {
     slug: "veyro", short: "Take control of your crypto.", kind: "app", crumb: "project 02 of 05", title: "VEYRO",
@@ -87,10 +87,10 @@ export const caseStudies: CaseStudy[] = [
       { name: "User Interface", note: "the everyday screens", title: "User interface", body: "Verified share data, transparent trading activity and identity-verified discussions.", shots: [img("traqstock", "ui", "Traqstock dashboard", { crop: 0.21 })] },
       { name: "More Screens", note: "a few more", title: "More screens", shots: [img("traqstock", "more-screens", "Traqstock company and finance screens", { crop: 0.21 })] },
     ],
-    next: "zazo",
+    next: "pace-wallet",
   },
   {
-    slug: "zazo", short: "Get paid from anywhere.", kind: "app", crumb: "project 05 of 05", title: "ZAZO",
+    slug: "zazo", short: "Get paid from anywhere.", kind: "app", crumb: "project 01 of 05", title: "ZAZO",
     tagline: "Get paid from anywhere", sticker: "FINTECH · PAYMENTS", accent: "#5EEAD4",
     summary: "A cross-border wallet that helps Pakistani freelancers and businesses get paid in USD, hold two currencies and pay locally in seconds.",
     cover: "/images/zazo/cover.webp",
@@ -103,7 +103,7 @@ export const caseStudies: CaseStudy[] = [
       { name: "Branding", note: "how it looks & feels", title: "Branding", shots: [img("zazo", "branding", "ZAZO branding", { crop: 0.25 })] },
       { name: "User Interface", note: "the everyday screens", title: "User interface", body: "Hold USD and PKR side by side, with live rates on every conversion.", shots: [img("zazo", "ui", "ZAZO home and receive screens", { crop: 0.2 })] },
     ],
-    next: "pace-wallet", wrapNote: "back to the start",
+    next: "veyro",
   },
 
   // ---------- UX CASE STUDIES ----------
@@ -191,7 +191,7 @@ export const caseStudies: CaseStudy[] = [
       { name: "UI elements", note: "in the product", title: "UI elements", shots: [img("nero", "ui-elements", "NERO UI elements")] },
       { name: "Social", note: "out in the world", title: "Social media", shots: [img("nero", "social-profile", "NERO social profile assets"), img("nero", "social-posts", "NERO social media posts")] },
     ],
-    next: "pace-wallet", nextLabel: "Back to the apps", wrapNote: "what's next",
+    next: "zazo", nextLabel: "Back to the apps", wrapNote: "what's next",
   },
 ];
 
