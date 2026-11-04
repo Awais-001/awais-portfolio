@@ -11,7 +11,7 @@ const story = [
   { year: "2024", place: "UET Taxila", role: "BS Computer Science", text: "Engineering roots. I learned how things get built, so now I design with developers, not just for them.", color: "#A78BFA" },
   { year: "2024", place: "Idenbrid Inc", role: "UX/UI Designer", text: "First design job: wireframes, prototypes and responsive UI for web and mobile.", color: "#5EEAD4" },
   { year: "2024 — 2025", place: "Clustox", role: "UX/UI Designer", text: "Got obsessed with usability testing. Core task completion went from 65% to 88%.", color: "#FF8A5B" },
-  { year: "2025 — NOW", place: "Quecko", role: "Product Designer", text: "End-to-end SaaS and FinTech products, plus a 120+ component multi-brand design system.", color: "#C6F432" },
+  { year: "2025 — NOW", place: "Quecko", role: "Product Designer", text: "End-to-end SaaS and FinTech products, with styles and components set up for each client brand.", color: "#C6F432" },
 ];
 
 const process = [

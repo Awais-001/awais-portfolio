@@ -8,7 +8,7 @@ const jobs = [
     company: "Quecko",
     role: "Product Designer",
     city: "Islamabad",
-    text: "End-to-end B2B/B2C SaaS & FinTech products, from research to handoff. Built and run a 120+ component multi-brand design system.",
+    text: "End-to-end B2B/B2C SaaS & FinTech products, from research to handoff. Set up styles and components for each client brand, and use Claude + Figma MCP to design faster.",
     sticker: { text: "CURRENT", bg: "#C6F432", rot: 3 },
   },
   {

@@ -4,10 +4,10 @@ import { SectionHeader, Sticker, Tape } from "../ui";
 
 const rows = [
   ["Product Design", "End-to-end, from research and journey maps to wireframes, prototypes and dev handoff."],
-  ["AI-first Design", "Claude + Figma MCP for first-pass screens and design-system checks, Figma Make for clickable prototypes. Concept to handoff 30% faster."],
+  ["AI-first Design", "Claude + Figma MCP for first-pass screens and consistency checks, and Claude-built HTML prototypes clients can actually click through."],
   ["Mobile & Web Apps", "iOS, Android and web UI for SaaS and fintech, with every state and edge case designed."],
   ["UX Research", "Interviews, usability tests and surveys that find where people get stuck. Took task completion from 65% to 88%."],
-  ["Design Systems", "Multi-brand component libraries with variants and tokens that keep growing products consistent."],
+  ["Design Systems", "Styles, tokens and components with variants for each client brand, so every screen stays consistent and easy to hand off."],
   ["Websites & Landing Pages", "Marketing sites and landing pages that make a product look as good as it works."],
 ];
 

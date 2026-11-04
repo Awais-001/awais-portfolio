@@ -23,11 +23,9 @@ function CountUp({ to, prefix = "", suffix = "" }: { to: number; prefix?: string
 }
 
 const items: { label: string; value: React.ReactNode }[] = [
-  { label: "Task time, fintech flows", value: <CountUp to={25} prefix="−" suffix="%" /> },
-  { label: "Concept → handoff", value: <><CountUp to={30} suffix="%" /> faster</> },
   { label: "Task completion", value: <><CountUp to={65} suffix="%" /> → <CountUp to={88} suffix="%" /></> },
   { label: "Front-end revisions", value: <CountUp to={20} prefix="−" suffix="%" /> },
-  { label: "Design system parts", value: <CountUp to={120} suffix="+" /> },
+  { label: "Projects designed", value: <CountUp to={20} suffix="+" /> },
 ];
 
 function Zigzag({ flip = false }: { flip?: boolean }) {
